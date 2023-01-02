@@ -1,0 +1,35 @@
+import turtle
+import math
+
+
+
+me=turtle.Turtle()
+me.speed(100000)
+me.screen.bgcolor("#FCF79C")
+def star(name,size):
+    for i in range(40):
+        name.forward(100) 
+        name.left(170)
+def random(name,size):
+    for i in range(size):
+        name.forward(math.sqrt(i))
+        name.left(i%180)
+for i in range(6):
+        me.color("purple")
+        me.penup()
+        me.goto((i,i+1))
+        me.pendown()
+        star(me,50)
+
+        me.color("red")
+        me.penup()
+        me.goto((i+200,i+200))
+        me.pendown()
+        star(me,50)
+        
+        me.color("black")
+        me.penup()
+        me.goto((i,0))
+        me.pendown()
+        random(me,50)
+turtle.done()
