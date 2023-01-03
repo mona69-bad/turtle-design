@@ -1,0 +1,55 @@
+import turtle
+me=turtle.Turtle()
+new=""
+for i in range (6):
+    me.color("black","#FCC2FF") #inner big box
+    me.begin_fill()
+    me.forward(100)
+    me.left(90)
+    me.forward(100)
+    me.left(90)
+    me.forward(100)
+    me.left(90)
+    me.forward(100)
+    
+    me.penup()
+    if new=="left":
+        new="right"
+        me.right(90)
+        me.forward(30)
+        me.pendown()
+    elif new=="right":
+        new=="left"
+        me.left(90)
+        me.forward(30)
+        me.pendown()
+    else:
+        new="right"
+        me.right(90)
+        me.forward(30)
+        me.pendown()
+    me.end_fill()
+    
+    
+    me.color("black","#92A2FF") #inner line
+    me.begin_fill()
+    me.forward(100)
+    me.left(90)
+    me.forward(100)
+    me.left(90)
+    me.forward(100)
+    me.left(90)
+    me.forward(100)
+    me.end_fill()
+    
+me.color("black","black") #inner mini box
+me.begin_fill()
+me.forward(30)
+me.right(90)
+me.forward(30)
+me.right(90)
+me.forward(30)
+me.right(90)
+me.forward(30)
+me.end_fill()
+turtle.done()    
